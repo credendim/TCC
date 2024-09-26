@@ -1,0 +1,10 @@
+<Page navigatingTo="onNavigatingTo" xmlns="http://schemas.nativescript.org/tns.xsd">
+    <ActionBar>
+        <Image src="~/images/senai.png" />
+    </ActionBar>
+
+    <GridLayout>
+        <!-- Add your page content here -->
+        <label text="Teste" />
+    </GridLayout>
+</Page>
