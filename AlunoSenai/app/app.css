@@ -9,7 +9,7 @@ page {
 ActionBar {
     font-size: 100px;
     color:white;
-    height: 350px;
+    height: 600px;
     background-color: #ED1F24;
     position: fixed;
     display: flex;
