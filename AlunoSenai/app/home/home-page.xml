@@ -5,6 +5,10 @@
 
     <GridLayout>
         <!-- Add your page content here -->
-        <label text="Teste" />
+        <label text="Teste2" />
+        <Frame class="ContainerNotificacao">
+        </Frame>
+        <Frame class="ContainerNotificacao2">
+        </Frame>
     </GridLayout>
 </Page>
