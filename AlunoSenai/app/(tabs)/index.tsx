@@ -49,9 +49,22 @@ export default function HomeScreen() {
           </Text>
         </View>
       </View>
-      <Text>
-        Ola
-      </Text>
+      <View style={styles.containerline}>
+        <View style={styles.line}></View>
+        <Text style={styles.linetext}>
+          Notificações Recentes
+        </Text>
+      </View>
+      <View>
+        <View>
+          <Text>
+            Agosto 16, 2024
+          </Text>
+        </View>
+        <View>
+            
+        </View>
+      </View>
     </View>
   );    
 }
@@ -62,13 +75,13 @@ const styles = StyleSheet.create({
     backgroundColor: '#ffffff',
   },
   headerImage: {
-    height: 80,
-    width: '70%',
-    top: 50,
+    height: 90,
+    width: '80%',
+    top: 40,
     position: 'absolute',
   },
   headerStyle: {
-    marginBottom: 60,
+    marginBottom: 70,
     alignItems: 'center',
     height: '25%',
     backgroundColor: '#ED1F24',
@@ -107,5 +120,23 @@ const styles = StyleSheet.create({
   },
   titleContainer: {
     backgroundColor: '#ED1F24',
+  },
+  containerline: {
+    width: '100%',
+    display: 'flex',
+    alignItems: 'center',
+  },
+  line: {
+    backgroundColor: '#ED1F24',
+    width: '100%',
+    height: 2,
+  },
+  linetext: {
+    fontSize: 17,
+    paddingLeft: 10,
+    paddingRight: 10,
+    backgroundColor: '#ffffff',
+    position: 'relative',
+    top: -12,
   },
 });

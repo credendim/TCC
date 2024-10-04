@@ -5,6 +5,7 @@ import { TabBarIcon } from '@/components/navigation/TabBarIcon';
 import { Colors } from '@/constants/Colors';
 import { useColorScheme } from '@/hooks/useColorScheme';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
+import Ionicons from '@expo/vector-icons/Ionicons';
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
@@ -18,24 +19,27 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
+          title: '',
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'home' : 'home-outline'} color={color} />
+            <TabBarIcon name={focused ? 'home' : 'home-outline'} color={focused ? '#ED1F24' : 'grey'} />
           ),
         }}
       />
       <Tabs.Screen
         name="carteirinha"
         options={{
+          title: '',
           tabBarIcon: ({ color, focused }) => (
-            <FontAwesome name={focused ? 'id-card' : 'id-card-o'} size={24} color={color} />
+            <FontAwesome name={focused ? 'id-card' : 'id-card-o'} size={30} color={focused ? '#ED1F24' : 'grey'} />
           ),
         }}
       />
       <Tabs.Screen
         name="explore"
         options={{
+          title: '',
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'code-slash' : 'code-slash-outline'} color={color} />
+            <Ionicons name={focused ? 'person-circle' : 'person-circle-outline'} color={focused ? '#ED1F24' : 'grey'} size={38}/>
           ),
         }}
       />
