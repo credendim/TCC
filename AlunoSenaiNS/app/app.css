@@ -1,0 +1,121 @@
+﻿/* Place any CSS rules you want to apply on both iOS and Android here.
+This is where the vast majority of your CSS code goes. */
+
+page {
+    display: flex;
+    padding: 0;
+    vertical-align: top;
+
+}
+
+ActionBar {
+    font-size: 100px;
+    color:white;
+    height: 450px;
+    background-color: #ED1F24;
+    position: fixed;
+    display: flex;
+    padding: 0;
+    z-index: 1;
+}
+
+ActionBar > image {
+    position: fixed;
+    width: 70%;
+    margin-top: -100px;
+}
+
+GridLayout {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    color: black;
+    background-color: white;
+}
+
+.ContainerNotificacao {
+    position: fixed;
+    margin-top: -100px;
+    vertical-align: top;
+    background-color: green;
+    z-index: 9999999;
+    height: 200px;
+    width: 200px;
+    border-radius: 50px;
+    margin-left: -270px;
+
+}
+
+.ContainerNotificacao2 {
+    position: fixed;
+    margin-top: -100px;
+    vertical-align: top;
+    background-color: red;
+    z-index: 2;
+    height: 200px;
+    width: 200px;
+    border-radius: 50px;
+    margin-left: -800px;
+}
+
+.ContainerNotificacao3 {
+    position: fixed;
+    margin-top: -100px;
+    vertical-align: top;
+    background-color: gray;
+    z-index: 2;
+    height: 200px;
+    width: 200px;
+    border-radius: 50px;
+    margin-left: 270px;
+}
+
+.ContainerNotificacao4 {
+    position: fixed;
+    margin-top: -100px;
+    margin-left: 800px;
+    vertical-align: top;
+    background-color: blue;
+    z-index: 2;
+    height: 200px;
+    width: 200px;
+    border-radius: 50px;
+}
+
+.notificação_line {
+    height: 5px;
+    width: 100%;
+    vertical-align: top;
+    background-color: #ED1F24;
+    margin-top: 200px;
+}
+
+.notificação_text {
+    background-color: white;
+    vertical-align: top;
+    margin-top: 175px;
+    padding-left: 50px;
+    padding-right: 50px;
+    width: 45%;
+    font-weight: 900;
+}
+
+.notificação_recente_top {
+    height: 50px;
+    width: 70%;
+    background-color: #ED1F24;
+}
+
+.notificação_recente_buttom {
+    height: 50px;
+    width: 70%;
+    /* background-color: #1fed22; */
+    box-shadow: 0px 12px 9px #4f4f4f;
+    margin-top: 50px;
+}
+
+AbsoluteLayout{
+    margin-top: 250px;
+}

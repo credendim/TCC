@@ -1,0 +1,28 @@
+<Page navigatingTo="onNavigatingTo" xmlns="http://schemas.nativescript.org/tns.xsd">
+    <ActionBar>
+        <Image src="~/images/senai.png" />
+    </ActionBar>
+    
+
+    <GridLayout>
+        <!-- Add your page content here -->
+        <label text="Teste1" />
+        <Frame class="ContainerNotificacao">
+        </Frame>
+        <Frame class="ContainerNotificacao2">
+        </Frame>
+        <Frame class="ContainerNotificacao3">
+        </Frame>
+        <Frame class="ContainerNotificacao4">
+        </Frame>
+        <Frame class="notificação_line">
+        </Frame>
+        <label class="notificação_text" text="Notificações Recentes" />
+        <AbsoluteLayout>
+            <Frame class="notificação_recente_top">
+            </Frame>
+            <Frame class="notificação_recente_buttom">
+            </Frame>
+        </AbsoluteLayout>
+    </GridLayout>
+</Page> 
