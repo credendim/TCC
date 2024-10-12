@@ -21,6 +21,28 @@ export default function Cartirinha() {
         <Text style={styles.titleText}>
           Carteirinha do estudante 
         </Text>
+        <View style={styles.cardfront}>
+          <Image source={require('@/assets/images/3.png')} style={styles.cardImage} resizeMode="stretch"></Image>
+          {/* <Image source={require('@/assets/images/3.png')} style={styles.cardImage} resizeMode="stretch"></Image> */}
+          <View style={styles.cardPhoto}></View>
+          <View style={styles.cardInformations}>
+            <Text>NOME DO ALUNO</Text>
+            <View>
+              <Text>Unidade</Text>
+              <Text>118 - A. Jacob LAFER</Text>
+            </View>
+            <View>
+              <Text>Nascimento</Text>
+              <Text>xx/xx/xxxx</Text>
+            </View>
+          </View>
+        </View>
+        <View style={styles.cardBack}>
+          <Image source={require('@/assets/images/4.png')} style={styles.cardImage} resizeMode="stretch"></Image>
+        </View>
+        <Text>
+          Toque para girar
+        </Text>
       </View>
     </View>
   );    
@@ -40,7 +62,7 @@ const styles = StyleSheet.create({
   headerStyle: {
     position: 'static',
     top: 0,
-    marginBottom: 30,
+    marginBottom: 25,
     alignItems: 'center',
     height: '25%',
     backgroundColor: '#ED1F24',
@@ -51,5 +73,33 @@ const styles = StyleSheet.create({
   titleText: {
     fontWeight: '600',
     fontSize: 20,
+    marginBottom: 15,
+  },
+  cardfront: {
+    display: 'flex',
+    alignItems: 'center',
+  },
+  cardImage: {
+    width: 270,
+    height: 400,
+    marginBottom: 10,
+  },
+  cardPhoto: {
+    top: 25,
+    backgroundColor: 'green',
+    width: 100,
+    height: 100,
+    position: 'absolute',
+    borderRadius: 100,
+  },
+  cardInformations: {
+    top: 140,
+    position: 'absolute',
+    alignItems: 'center',
+    gap: 30,
+  },
+  cardBack: {
+    top: 37,
+    position: 'absolute',
   },
 });
