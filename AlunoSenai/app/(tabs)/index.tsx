@@ -180,6 +180,7 @@ const styles = StyleSheet.create({
   },
   ScrollView: {
     marginTop: -5,
+    // marginBottom: 40,
   },
   headerImage: {
     height: 90,

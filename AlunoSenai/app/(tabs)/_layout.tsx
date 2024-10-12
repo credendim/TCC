@@ -1,4 +1,5 @@
 import { Tabs } from 'expo-router';
+import { ScrollView, Image, StyleSheet, Platform, Text, View, Pressable } from 'react-native';
 import React from 'react';
 
 import { TabBarIcon } from '@/components/navigation/TabBarIcon';
@@ -21,7 +22,7 @@ export default function TabLayout() {
         options={{
           title: '',
           tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'home' : 'home-outline'} color={focused ? '#ED1F24' : 'grey'} />
+            <TabBarIcon style={styles.icons} name={focused ? 'home' : 'home-outline'} color={focused ? '#ED1F24' : 'grey'} />
           ),
         }}
       />
@@ -30,7 +31,7 @@ export default function TabLayout() {
         options={{
           title: '',
           tabBarIcon: ({ color, focused }) => (
-            <FontAwesome name={focused ? 'id-card' : 'id-card-o'} size={30} color={focused ? '#ED1F24' : 'grey'} />
+            <FontAwesome style={styles.icons} name={focused ? 'id-card' : 'id-card-o'} size={30} color={focused ? '#ED1F24' : 'grey'} />
           ),
         }}
       />
@@ -39,10 +40,27 @@ export default function TabLayout() {
         options={{
           title: '',
           tabBarIcon: ({ color, focused }) => (
-            <Ionicons name={focused ? 'person-circle' : 'person-circle-outline'} color={focused ? '#ED1F24' : 'grey'} size={38}/>
+            <Ionicons style={styles.icons} name={focused ? 'person-circle' : 'person-circle-outline'} color={focused ? '#ED1F24' : 'grey'} size={45}/>
           ),
         }}
       />
     </Tabs>
   );
 }
+const styles = StyleSheet.create({
+  tabs: {
+    backgroundColor: 'green',
+  },
+  icons: {
+    backgroundColor: '#ffff',
+    width: 60,
+    height: 60,
+    marginBottom: 45,
+    textAlign:'center',
+    verticalAlign: 'middle',
+    borderRadius: 100,
+    shadowOpacity: 0.6,
+    shadowRadius: 8,
+    elevation: 5,
+  },
+})
