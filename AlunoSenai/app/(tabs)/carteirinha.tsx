@@ -74,7 +74,8 @@ export default function Carteirinha() {
         </Animated.View>
         <Animated.View style={[styles.cardBack, backAnimatedStyle]}>
           <Image source={require('@/assets/images/4.png')} style={styles.cardImage} resizeMode="stretch"></Image>
-          <View style={styles.cardInformations}>
+          <View style={styles.backCardPhoto}></View>
+          <View style={styles.cardInformations2}>
             <View>
               <Text>Unidade</Text>
               <Text>118 - A. Jacob LAFER</Text>
@@ -145,5 +146,22 @@ const styles = StyleSheet.create({
     top: 37,
     position: 'absolute',
     backfaceVisibility: 'hidden',
+    
+  },
+  cardInformations2: {
+    top: 250,
+    position: 'absolute',
+    width: '100%',
+    alignItems: 'center',
+    gap: 30,
+  },
+  backCardPhoto: {
+    alignSelf: 'center',
+    top: 70,
+    backgroundColor: 'green',
+    width: 150,
+    height: 150,
+    position: 'absolute',
+    borderRadius: 100,
   },
 });
