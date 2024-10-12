@@ -1,5 +1,17 @@
 
-import { ScrollView, Image, StyleSheet, Platform, Text, View } from 'react-native';
+import { ScrollView, Image, StyleSheet, Platform, Text, View, Pressable } from 'react-native';
+import Animated, {
+  Easing,
+  interpolate,
+  useAnimatedStyle,
+  useSharedValue,
+  withSpring,
+  withTiming,
+  runOnJS,
+  useDerivedValue,
+} from 'react-native-reanimated';
+import { TapGestureHandler, State } from 'react-native-gesture-handler';
+import React, {useState} from 'react';
 import { MaterialIcons } from '@expo/vector-icons';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import AntDesign from '@expo/vector-icons/AntDesign';
@@ -11,17 +23,40 @@ import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import { Appearance } from 'react-native';
 
-export default function Cartirinha() {  
+export default function Carteirinha() {  
+  const rotate = useSharedValue(0);
+  const frontAnimatedStyle = useAnimatedStyle(() =>{
+    const rotateValue = interpolate(rotate.value, [0,1],[0, -180])
+    return {
+      transform: [
+        {
+          rotateY : withTiming(`${rotateValue}deg` ,{duration:750})
+        }
+      ]
+    }
+  })
+  const backAnimatedStyle = useAnimatedStyle(() =>{
+    const rotateValue = interpolate(rotate.value, [0,1],[-180, -360])
+    return {
+      transform: [
+        {
+          rotateY : withTiming(`${rotateValue}deg` ,{duration:750})
+        }
+      ]
+    }
+  })
   return (
     <View style={styles.body}>
       <View style={styles.headerStyle}>
         <Image source={require('@/assets/images/senai.png')} style={styles.headerImage}></Image>
       </View>
-      <View style={styles.contentBody}>
+      <Pressable style={styles.contentBody} onPress={() =>{
+        rotate.value = rotate.value ? 0 :1;
+      }}>
         <Text style={styles.titleText}>
-          Carteirinha do estudante 
+          Carteirinha do estudante
         </Text>
-        <View style={styles.cardfront}>
+        <Animated.View style={[styles.cardfront, frontAnimatedStyle]}>
           <Image source={require('@/assets/images/3.png')} style={styles.cardImage} resizeMode="stretch"></Image>
           {/* <Image source={require('@/assets/images/3.png')} style={styles.cardImage} resizeMode="stretch"></Image> */}
           <View style={styles.cardPhoto}></View>
@@ -36,14 +71,21 @@ export default function Cartirinha() {
               <Text>xx/xx/xxxx</Text>
             </View>
           </View>
-        </View>
-        <View style={styles.cardBack}>
+        </Animated.View>
+        <Animated.View style={[styles.cardBack, backAnimatedStyle]}>
           <Image source={require('@/assets/images/4.png')} style={styles.cardImage} resizeMode="stretch"></Image>
-        </View>
+          <View style={styles.cardInformations}>
+            <View>
+              <Text>Unidade</Text>
+              <Text>118 - A. Jacob LAFER</Text>
+            </View>
+              <Text>xx/xx/xxxx</Text>
+          </View>
+        </Animated.View>
         <Text>
           Toque para girar
         </Text>
-      </View>
+      </Pressable>
     </View>
   );    
 }
@@ -78,6 +120,7 @@ const styles = StyleSheet.create({
   cardfront: {
     display: 'flex',
     alignItems: 'center',
+    backfaceVisibility: 'hidden',
   },
   cardImage: {
     width: 270,
@@ -101,5 +144,6 @@ const styles = StyleSheet.create({
   cardBack: {
     top: 37,
     position: 'absolute',
+    backfaceVisibility: 'hidden',
   },
 });
