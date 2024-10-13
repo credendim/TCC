@@ -61,14 +61,14 @@ export default function Carteirinha() {
           {/* <Image source={require('@/assets/images/3.png')} style={styles.cardImage} resizeMode="stretch"></Image> */}
           <View style={styles.cardPhoto}></View>
           <View style={styles.cardInformations}>
-            <Text>NOME DO ALUNO</Text>
+            <Text style={styles.cardTittle}>NOME DO ALUNO</Text>
             <View>
-              <Text>Unidade</Text>
-              <Text>118 - A. Jacob LAFER</Text>
+              <Text style={styles.cardtittle3}>Unidade</Text>
+              <Text style={styles.cardTittle2}>118 - A. Jacob LAFER</Text>
             </View>
             <View>
-              <Text>Nascimento</Text>
-              <Text>xx/xx/xxxx</Text>
+              <Text style={styles.cardtittle3}>Nascimento</Text>
+              <Text style={styles.cardTittle2}>xx/xx/xxxx</Text>
             </View>
           </View>
         </Animated.View>
@@ -77,10 +77,10 @@ export default function Carteirinha() {
           <View style={styles.backCardPhoto}></View>
           <View style={styles.cardInformations2}>
             <View>
-              <Text>Unidade</Text>
-              <Text>118 - A. Jacob LAFER</Text>
+              <Text style={styles.cardtittle3}>Unidade</Text>
+              <Text style={styles.cardTittle2}>118 - A. Jacob LAFER</Text>
             </View>
-              <Text>xx/xx/xxxx</Text>
+              <Text style={styles.cardtittle3}>Controle do acesso SENAI-SP</Text>
           </View>
         </Animated.View>
         <Text>
@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
   headerStyle: {
     position: 'static',
     top: 0,
-    marginBottom: 25,
+    marginBottom: 10,
     alignItems: 'center',
     height: '25%',
     backgroundColor: '#ED1F24',
@@ -163,5 +163,17 @@ const styles = StyleSheet.create({
     height: 150,
     position: 'absolute',
     borderRadius: 100,
+  },
+  cardTittle: {
+    fontWeight: '600',
+    fontSize: 20,
+  },
+  cardTittle2: {
+    fontWeight: '600',
+    fontSize: 15,
+  },
+  cardtittle3: {
+    fontWeight: '300',
+    textAlign: 'center',
   },
 });
