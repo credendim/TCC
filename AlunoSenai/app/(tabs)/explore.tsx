@@ -23,6 +23,8 @@ export default function HomeScreen() {
           <Text style={styles.cardTittle3}>Curso - Senai</Text>
         </View>
       </View>
+      <View style={styles.line}></View>
+      
     </View>
   );    
 }
@@ -71,5 +73,12 @@ const styles = StyleSheet.create({
   },
   containerInformation: {
     gap: 5,
+  },
+  line: {
+    backgroundColor: '#F20F0F',
+    width: '80%',
+    marginTop: 15,
+    height: 2,
+    alignSelf: 'center',
   },
 });
