@@ -24,7 +24,6 @@ export default function HomeScreen() {
         </View>
       </View>
       <View style={styles.line}></View>
-      
     </View>
   );    
 }
@@ -76,7 +75,7 @@ const styles = StyleSheet.create({
   },
   line: {
     backgroundColor: '#F20F0F',
-    width: '80%',
+    width: '85%',
     marginTop: 15,
     height: 2,
     alignSelf: 'center',
