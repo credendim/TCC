@@ -16,6 +16,7 @@ export default function HomeScreen() {
       <View style={styles.headerStyle}>
         <Image source={require('@/assets/images/senai.png')} style={styles.headerImage}></Image>
       </View>
+      <View style={styles.notificationAlert}></View>
       <View style={styles.buttonContainer}>
         <View style={styles.buttonparts}>
           <View style={styles.button}>
@@ -159,11 +160,28 @@ export default function HomeScreen() {
           </View>
           <View style={styles.balloonContent}>
               <View style={styles.balloonContenttext2}>
-                <Text style={styles.balloonContenttext}>
-                  FIESP, SENAI-SP e Sebrae-SP lançam Jornada de Descarbonização para a indústria paulista
+              <Text style={styles.contentTittle}>
+                  Atenção!
                 </Text>
-                <Text style={styles.seemore}>
-                  Saiba mais
+                <Text style={styles.balloonContenttext2}>
+                  As notas que constam aqui no  APP correspondem a seus resultados parciais. Os resultados finais serão disponibilizados em seu boletim e no histórico escolar, quando for o caso. Consulte a secretaria da Escola caso tenha alguma dúvida sobre suas notas. Att. SENAI.
+                </Text>
+              </View>
+          </View>
+      </View>
+      <View style={styles.sendFormBallon}>
+          <View style={styles.SendFormTitle}>
+            <Text style={styles.balloonTitle}>
+              Liberação
+            </Text>
+          </View>
+          <View style={styles.balloonContent}>
+              <View style={styles.balloonContenttext2}>
+                <Text style={styles.balloonContenttext3}>
+                  Precisa Sair mais cedo?
+                </Text>
+                <Text style={styles.sendForm}>
+                  Enviar Formulário
                 </Text>
               </View>
           </View>
@@ -196,6 +214,17 @@ const styles = StyleSheet.create({
     height: '25%',
     backgroundColor: '#ED1F24',
   },
+  notificationAlert: {
+    width: 20,
+    height: 20,
+    backgroundColor: '#EF7B7B',
+    position: 'absolute',
+    top: 135,
+    left: 10,
+    zIndex: 10,
+    borderRadius: 100,
+    // display: 'none',
+  },  
   buttonContainer: {
     width: '100%',
     top: 140,
@@ -340,5 +369,39 @@ const styles = StyleSheet.create({
   },
   balloonContenttext2: {
     width: '100%',
+  },
+  contentTittle: {
+    color: '#F20F0F',
+  },
+  sendFormBallon: {
+    backgroundColor: '#ffffff',
+    borderRadius: 15,
+    shadowOpacity: 0.8,
+    shadowRadius: 8,
+    elevation: 5,
+    marginLeft: 90,
+    marginRight: 95,
+    marginBottom: 55,
+    marginTop: 15,
+  },
+  SendFormTitle: {
+    borderTopLeftRadius: 15,
+    borderTopRightRadius: 15,
+    paddingLeft: 5,
+    textAlignVertical: 'center',
+    color: 'white',
+    height: 25,
+    fontSize: 15,
+    fontWeight: '600',
+    backgroundColor: '#EF7B7B',
+  },
+  balloonContenttext3: {
+    textAlign: 'center',
+    fontWeight: '900',
+  },
+  sendForm: {
+    textAlign: 'center',
+    color: '#EF7B7B',
+    textDecorationLine: 'underline',
   },
 });
